@@ -33,3 +33,4 @@ variable "sample_dict" {
  # The above one is the most preferred to use
 variable "env" {}
 variable "auto_num1" {}
+variable "sample1" {}
