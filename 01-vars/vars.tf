@@ -30,4 +30,5 @@ variable "sample_dict" {
 
   }
 }
- # The above one is the most prefered to use
+ # The above one is the most preferred to use
+variable "env" {}
