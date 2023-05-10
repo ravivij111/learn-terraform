@@ -9,7 +9,7 @@ variable "sample_number" {
 }
 
 variable "sample_boolean" {
-  value = true
+  default = true
 }
 # We have list variable type, Meaning single variable can hold multiple data types values
 variable "sample_list" {
