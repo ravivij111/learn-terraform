@@ -45,7 +45,7 @@ variable "fruits" {
     banana = {
       name = "banana"
       count = 20
-      color = "banana"
+      color = "yellow"
     }
   }
 
