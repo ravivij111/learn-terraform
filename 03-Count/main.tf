@@ -8,6 +8,6 @@ variable "fruits" {
 }
 
 resource "null_resource" "fruits" {
-  count = length(fruits)
+  count = length(var.fruits)
 
 }
