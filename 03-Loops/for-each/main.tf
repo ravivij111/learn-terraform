@@ -56,4 +56,5 @@ resource "null_resource" "fruits" {
     command = "echo Fruit Name - ${each.key} - ${each.value["color"]}"
   }
 }
+
 # *************** End of for_each *************************
