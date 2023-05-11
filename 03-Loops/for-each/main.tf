@@ -46,6 +46,7 @@ variable "fruits" {
       count = 20
     }
   }
+
 }
 resource "null_resource" "fruits" {
   for_each = var.fruits
