@@ -19,17 +19,40 @@
 
 
 # *************** Start of for_each *************************
-variable "fruits" {
+variable "fruits1" {
   default = {
     apple = 10
     orange = 15
     banana =20
     }
 }
-resource "null_resource" "fruits" {
-  for_each = var.fruits
+resource "null_resource" "fruits1" {
+  for_each = var.fruits1
   provisioner "local-exec" {
     command = "echo Fruit Name - $(each.key) - (each.value)"
+  }
+}
+
+variable "fruits" {
+  default = {
+    apple = {
+      name = "apple"
+      count = 10
+    }
+    orange = {
+      name = "orange"
+      count = 15
+    }
+    banana = {
+      name = "banana"
+      count = 20
+    }
+  }
+}
+resource "null_resource" "fruits1" {
+  for_each = var.fruits
+  provisioner "local-exec" {
+    command = "echo Fruit Name - $(each.key) - $(each.value['count'])"
   }
 }
 
