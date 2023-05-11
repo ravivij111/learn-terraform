@@ -30,7 +30,7 @@ resource "null_resource" "fruits1" {
     command = "echo Fruit Name - $(each.key) - (each.value)"
   }
 }*/
-/*
+
 variable "fruits" {
   default = {
     apple = {
@@ -54,5 +54,5 @@ resource "null_resource" "fruits" {
     command = "echo Fruit Name - $(each.key) - $(each.value['count'])"
   }
 }
-*/
+
 # *************** End of for_each *************************
