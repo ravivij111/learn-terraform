@@ -27,7 +27,7 @@ resource "null_resource" "fruits" {
 resource "null_resource" "fruits1" {
   for_each = var.fruits1
   provisioner "local-exec" {
-    command = "echo Fruit Name - $(each.key) - (each.value)"
+    command = "echo Fruit Name - " $(each.key) - (each.value)"
   }
 }*/
 variable "fruits" {
@@ -35,14 +35,17 @@ variable "fruits" {
     apple = {
       name = "apple"
       count = 10
+      color = "red"
     }
     orange = {
       name = "orange"
       count = 15
+      color = "orange"
     }
     banana = {
       name = "banana"
       count = 20
+      color = "banana"
     }
   }
 
@@ -50,7 +53,7 @@ variable "fruits" {
 resource "null_resource" "fruits" {
   for_each = var.fruits
   provisioner "local-exec" {
-    command = "echo Fruit Name - $(each.key) - $(each.value['count'])"
+    command = "echo Fruit Name - ${each.key} - ${each.value["color"]}"
   }
 }
 # *************** End of for_each *************************
