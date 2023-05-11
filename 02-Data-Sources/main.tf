@@ -15,8 +15,7 @@
 #  value =  data.aws_security_group.selected.id
 #}
 
-data "aws_security_groups" "all_security_groups" {}
-
+data "aws_security_groups" "all_security_group" {}
 output "all_security_groups" {
-  value =  data.aws_security_groups.all_security_groups
+  value =  data.aws_security_groups.all_security_group
 }
