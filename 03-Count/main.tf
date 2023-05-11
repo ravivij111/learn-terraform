@@ -4,7 +4,7 @@
 #}
 
 variable "fruits" {
-  default = ["apple","banana","orange"]
+  default = ["apple","banana","orange","banana"]
 }
 
 resource "null_resource" "fruits" {
