@@ -18,7 +18,7 @@ resource "null_resource" "fruits" {
  *************** End of Count **************************/
 
 
-# *************** Start of for_each *************************
+# *************** Start of for_each for *************************
 /*variable "fruits1" {
   default = {
     "apple", "orange", "banana"
@@ -31,6 +31,7 @@ resource "null_resource" "fruits1" {
   }
 }*/
 
+/* #for_each for the objects
 
 variable "fruits" {
   default = {
@@ -58,6 +59,16 @@ resource "null_resource" "fruits" {
     command = "echo Fruit Name - ${each.key} - ${each.value["color"]}"
   }
 }
+*/
 
+variable "vegetables" {
+  default = ["carrot", "capsicum"]
 
+}
+resource "null_resource" "fruits" {
+  for_each = var.vegetables
+  provisioner "local-exec" {
+    command = "echo Fruit Name - ${each.key} "
+  }
+}
 # *************** End of for_each *************************
