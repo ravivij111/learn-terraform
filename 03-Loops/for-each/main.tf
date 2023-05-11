@@ -30,7 +30,7 @@ resource "null_resource" "fruits1" {
     command = "echo Fruit Name - " $(each.key) - (each.value)"
   }
 }*/
-/*variable "fruits" {
+variable "fruits" {
   default = {
     apple = {
       name = "apple"
@@ -55,6 +55,6 @@ resource "null_resource" "fruits" {
   provisioner "local-exec" {
     command = "echo Fruit Name - ${each.key} - ${each.value["color"]}"
   }
-}*/
+}
 
 # *************** End of for_each *************************
