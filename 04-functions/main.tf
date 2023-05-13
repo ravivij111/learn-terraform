@@ -13,7 +13,7 @@ output "sample" {
     default = ["abcd", "xyz"]
   }
 
-## print the 1st value with the functions
+## print the 1st value from the list with the functions
 
 output "sample1" {
   value = element(var.sample1,0)
