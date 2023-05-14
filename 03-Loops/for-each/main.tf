@@ -34,7 +34,7 @@ resource "null_resource" "fruits1" {
 }*/
 
 
-/* #for_each for the objects
+#for_each for the objects
 
 variable "fruits" {
   default = {
@@ -62,7 +62,7 @@ resource "null_resource" "fruits" {
     command = "echo Fruit Name - ${each.key} - ${each.value["color"]}"
   }
 }
-*/
+
 /*
 // for_each for set
 variable "vegetables" {
