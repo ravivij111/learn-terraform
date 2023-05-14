@@ -59,5 +59,5 @@ output "print_the_names" {
   value = [for name in var.user_names : name]
 }
 output "print_the_components" {
-  value = [for name in var.user_names : name]
+  value = [for name in var.components : name]
 }
