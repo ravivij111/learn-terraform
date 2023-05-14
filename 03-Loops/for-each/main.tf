@@ -37,7 +37,7 @@ resource "null_resource" "fruits1" {
 #for_each for the objects
 
 variable "fruits" {
-  default = {
+
     apple = {
       name = "appleVal"
       count = 10
@@ -53,7 +53,6 @@ variable "fruits" {
       count = 20
       color = "yellow"
     }
-  }
 
 }
 resource "null_resource" "fruits" {
