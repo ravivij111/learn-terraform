@@ -35,27 +35,8 @@ resource "null_resource" "fruits1" {
 
 
 #for_each for the objects
-
-variable "fruits" {
-  default = {
-    apple = {
-      name  = "appleVal"
-      count = 10
-      color = "red"
-    }
-    orange = {
-      name  = "orangeVal"
-      count = 15
-      color = "orange"
-    }
-    banana = {
-      name  = "bananaVal"
-      count = 20
-      color = "yellow"
-    }
-
-  }
-}
+/*
+ */
 resource "null_resource" "fruits" {
   for_each = var.fruits
  provisioner "local-exec" {
