@@ -16,14 +16,18 @@ resource "null_resource" "fruits" {
   }
 }
  *************** End of Count **************************/
-
+/*
+variable "instances" {
+  type = set(string)
+  default = ["instance1", "instance2", "instance3"]
+}
+*/
 
 # *************** Start of for_each for *************************
  # for each for list
 variable "fruits1" {
-  default =
-    ["apple", "orange", "banana"]
-type = set(string)
+  default = ["apple", "orange", "banana"]
+
 }
 
 resource "null_resource" "fruits1" {
