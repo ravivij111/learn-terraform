@@ -57,23 +57,23 @@ variable "fruits2" {
     }
   }
 }
-/*
+
 resource "null_resource" "fruits2" {
   for_each = var.fruits2
   provisioner "local-exec" {
     command = "echo **** Key Name - ${each.key} ************* \n  Value: ${each.value["color"]} "
   }
 }
-*/
 
 
+/*
 #for_each for the objects
 resource "null_resource" "fruits2" {
   for_each = var.fruits2
  provisioner "local-exec" {
      command = "echo **** Key Name - ${each.key} ************* \n  echo Fruit Name -  ${each.value["name"]} \n  echo Fruit count -  ${each.value["count"]} \n  echo Fruit color -  ${each.value["color"]} "
   }
-}
+} */
 
 
 /*
