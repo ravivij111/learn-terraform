@@ -32,9 +32,12 @@ variable "fruits1" {
 
 resource "null_resource" "fruits1" {
   for_each = var.fruits1
-  provisioner "local-exec" {
-    command = "echo Fruit Name -  ${each.key} - ${each.value}"
-  }
+  //provisioner "local-exec" {
+  user_data = <<-EOT
+      #!/bin/bash
+    echo Fruit Name - each.key - each.value"
+EOT
+ // }
 }
 
 
