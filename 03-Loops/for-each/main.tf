@@ -23,13 +23,13 @@ resource "null_resource" "fruits" {
 variable "fruits1" {
   default =
     ["apple", "orange", "banana"]
-
+type = set(string)
 }
 
 resource "null_resource" "fruits1" {
   for_each = var.fruits1
   provisioner "local-exec" {
-    command = "echo Fruit Name -  $(each.key) - (each.value)"
+    command = "echo Fruit Name -  $(each.key) - $(each.value)"
   }
 }
 
