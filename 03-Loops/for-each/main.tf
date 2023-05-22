@@ -61,7 +61,7 @@ variable "fruits2" {
 resource "null_resource" "fruits2" {
   for_each = var.fruits2
   provisioner "local-exec" {
-    command = "echo **** Key Name - ${each.key} ************* \n  Value: ${each.value["name"]} "
+    command = "echo **** Key Name - ${each.key} ************* \n  echo Value: ${each.value["color"]} "
   }
 }
 
