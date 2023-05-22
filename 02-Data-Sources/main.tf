@@ -16,9 +16,9 @@
 #}
 
 data "aws_security_groups" "all_security_group" {}
-output "all_security_groups" {
+/*output "all_security_groups" {
   value =  data.aws_security_groups.all_security_group
-}
+}*/
 
 data "aws_security_group" "single" {
   count = length(data.aws_security_groups.all_security_group.ids)
