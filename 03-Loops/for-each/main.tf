@@ -27,7 +27,7 @@ variable "instances" {
  # for each for list
 variable "fruits1" {
   default = ["apple", "orange", "banana"]
-
+  type =set(string)
 }
 
 resource "null_resource" "fruits1" {
