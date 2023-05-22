@@ -19,7 +19,7 @@ resource "null_resource" "fruits" {
 
 
 # *************** Start of for_each for *************************
-/* # for each for list
+ # for each for list
 variable "fruits1" {
   default =
     ["apple", "orange", "banana"]
@@ -31,12 +31,12 @@ resource "null_resource" "fruits1" {
   provisioner "local-exec" {
     command = "echo Fruit Name -  $(each.key) - (each.value)"
   }
-}*/
+}
 
 
 #for_each for the objects
 /*
- */
+
 resource "null_resource" "fruits" {
   for_each = var.fruits
  provisioner "local-exec" {
@@ -44,7 +44,7 @@ resource "null_resource" "fruits" {
   }
 }
 
-/*
+
 // for_each for set
 variable "vegetables" {
   default = ["carrot", "capsicum"]
