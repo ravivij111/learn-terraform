@@ -1,8 +1,8 @@
-#resource "null_resource" "null" {
-#  count =10
-#
-#}
+resource "null_resource" "null" {
+  count =10
 
+}
+/*
 variable "fruits" {
   default = ["apple","banana","orange","banana"]
 }
@@ -12,4 +12,4 @@ resource "null_resource" "fruits" {
   provisioner "local-exec" {
     command = "echo Fruit Name - ${var.fruits[count.index]}"
   }
-}
+} */
