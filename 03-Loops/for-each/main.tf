@@ -43,38 +43,39 @@ variable "fruits2" {
     app = {
       name = "apple"
       color = "red"
+      count = 10
     }
     ban ={
       name = "banana"
       color = "Yellow"
+      count = 20
     }
     org = {
       name = "Orange"
       color = "Col_Orange"
+      count = 30
     }
   }
 
 }
-
+/*
 resource "null_resource" "fruits2" {
   for_each = var.fruits2
   provisioner "local-exec" {
     command = "echo **** Key Name - ${each.key} ************* \n  Value: ${each.value["color"]} "
   }
-
-
 }
+*/
 
-/*
 
 #for_each for the objects
-resource "null_resource" "fruits" {
-  for_each = var.fruits
+resource "null_resource" "fruits2" {
+  for_each = var.fruits2
  provisioner "local-exec" {
      command = "echo **** Key Name - ${each.key} ************* \n  echo Fruit Name -  ${each.value["name"]} \n  echo Fruit count -  ${each.value["count"]} \n  echo Fruit color -  ${each.value["color"]} "
   }
 }
-*/
+
 
 /*
 // for_each for set
