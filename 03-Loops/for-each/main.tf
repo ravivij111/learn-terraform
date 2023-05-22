@@ -56,7 +56,6 @@ variable "fruits2" {
       count = 30
     }
   }
-
 }
 /*
 resource "null_resource" "fruits2" {
