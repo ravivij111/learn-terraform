@@ -9,7 +9,8 @@ module "dummy" {
 
 }
 // Refer one module in anotehr module
+/*
 module "sample1" {
   source = "./module"
   input = module.dummy.dummy_op
-}
+}*/
