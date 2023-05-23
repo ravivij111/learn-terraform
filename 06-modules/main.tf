@@ -1,8 +1,8 @@
-module "sample" {
+/*module "sample" {
   source = "./module"
   input = module.dummy.dummy_op
   # the above input is a variable which should be declared in another file. We are passing this as input to the module
-}
+}*/
 
 module "dummy" {
   source = "./dummy"
