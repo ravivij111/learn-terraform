@@ -1,3 +1,3 @@
 output "dummy_op" {
-  value = "xxyyzz"
+  value = "12345678"
 }
